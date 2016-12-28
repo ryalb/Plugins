@@ -53,6 +53,8 @@ $.fn.dataTableExt.oPagination.listbox = {
             }
             oSettings._iDisplayStart = iNewStart;
             fnCallbackDraw(oSettings);
+
+            $(oSettings.nTable).trigger('page.dt');
         });
 
         /* Take the brutal approach to cancelling text selection */
